@@ -18,4 +18,8 @@ class Pallete {
   static const Color transparentColor = Colors.transparent;
 
   static const Color inactiveSeekColor = Colors.white38;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2ab4b1013b4d0cdbd5d6ef9e6dd2aee80cb30a26

@@ -20,4 +20,8 @@ class AppTheme {
       backgroundColor: Pallete.backgroundColor,
     ),
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2ab4b1013b4d0cdbd5d6ef9e6dd2aee80cb30a26
