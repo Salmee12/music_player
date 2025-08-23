@@ -1,0 +1,27 @@
+import 'app_pallete.dart';
+import 'package:flutter/material.dart';
+
+class AppTheme {
+  static OutlineInputBorder _border(Color color) => OutlineInputBorder(
+    borderSide: BorderSide(
+      color: color,
+      width: 3,
+    ),
+    borderRadius: BorderRadius.circular(10),
+  );
+  static final darkThemeMode = ThemeData.dark().copyWith(
+    scaffoldBackgroundColor: Pallete.backgroundColor,
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: const EdgeInsets.all(27),
+      enabledBorder: _border(Pallete.borderColor),
+      focusedBorder: _border(Colors.blue),
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: Pallete.backgroundColor,
+    ),
+  );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 2ab4b1013b4d0cdbd5d6ef9e6dd2aee80cb30a26
