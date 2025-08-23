@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ae0189e-d356-4e88-8cea-3f36bbfdea68" name="Changes" comment="Signup page design completed">
-      <change beforePath="$PROJECT_DIR$/client/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +79,11 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "rafi",
+    "git-widget-placeholder": "dev",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "F:/FlutterProjects/flutter_internet_connection",
-    "settings.editor.selected.configurable": "editor.preferences.folding",
+    "settings.editor.selected.configurable": "com.google.gct.login2.settings.GoogleLoginApplicationSettingsConfigurableProvider",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
