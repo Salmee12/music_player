@@ -5,6 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ae0189e-d356-4e88-8cea-3f36bbfdea68" name="Changes" comment="Signup page design completed">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/core/theme/app_pallete.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/theme/app_pallete.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/core/theme/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/theme/theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/features/auth/view/pages/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/view/pages/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/features/auth/view/pages/signup_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/view/pages/signup_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +80,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Flutter.main.dart.executor": "Run",
+    "Flutter.main.dart.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -89,6 +98,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\FlutterProjects\music_player\client\lib\features\auth\repository" />
       <recent name="F:\FlutterProjects\music_player\client\lib\features" />
     </key>
   </component>
@@ -156,6 +166,11 @@
           <url>file://$PROJECT_DIR$/client/lib/core/theme/theme.dart</url>
           <line>16</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/client/lib/features/auth/model/user_model.dart</url>
+          <line>5</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

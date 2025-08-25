@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/features/auth/repository/auth_remote_repository.dart';
 
 import '../../../../core/theme/app_pallete.dart';
 import '../widgets/auth_gradient_button.dart';
 import '../widgets/custom_field.dart';
+import 'login_page.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -57,9 +59,18 @@ class _SignupPageState extends State<SignupPage> {
                controller: passwordController,
                isObscureText: true,),
              const SizedBox(height: 15),
-             AuthGradientButton(buttonText: "Sign Up", onTap: (){},),
+             AuthGradientButton(buttonText: "Sign Up",
+               onTap: () async{
+                await  AuthRemoteRepository().signup(
+                   name:nameController.text,
+                   email:emailController.text,
+                   password:passwordController.text);
+             },),
              const SizedBox(height: 20),
-             RichText(
+           GestureDetector(
+             onTap: ()
+             {Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginPage(),));},
+             child: RichText(
                text: TextSpan(
                  text: 'Already have an account? ',
                  style: Theme.of(context).textTheme.titleMedium,
@@ -74,6 +85,7 @@ class _SignupPageState extends State<SignupPage> {
                  ],
                ),
              ),
+           )
            ],
          ),
          ),

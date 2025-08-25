@@ -8,8 +8,7 @@ class Pallete {
 
   static const Color backgroundColor = Color.fromRGBO(18, 18, 18, 1);
   static const Color gradient1 = Color.fromRGBO(120, 146, 225, 1.0);
-  static const Color gradient2 = Color.fromRGBO(
-      13, 5, 234, 0.6588235294117647);
+  static const Color gradient2 = Color.fromRGBO(13, 5, 234, 0.6588235294117647);
   static const Color gradient3 = Color.fromRGBO(255, 159, 124, 1);
   static const Color borderColor = Color.fromRGBO(52, 51, 67, 1);
   static const Color whiteColor = Colors.white;
@@ -18,8 +17,4 @@ class Pallete {
   static const Color transparentColor = Colors.transparent;
 
   static const Color inactiveSeekColor = Colors.white38;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2ab4b1013b4d0cdbd5d6ef9e6dd2aee80cb30a26
