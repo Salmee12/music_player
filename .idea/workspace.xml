@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ae0189e-d356-4e88-8cea-3f36bbfdea68" name="Changes" comment="Signup page design completed">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/core/theme/app_pallete.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/theme/app_pallete.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/core/theme/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/theme/theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/client/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/core/constants/server_constant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/constants/server_constant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/features/auth/repository/auth_remote_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/repository/auth_remote_repository.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/lib/features/auth/view/pages/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/view/pages/login_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/lib/features/auth/view/pages/signup_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/view/pages/signup_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/features/auth/viewmodel/auth_viewmodel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/viewmodel/auth_viewmodel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/features/auth/viewmodel/auth_viewmodel.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/viewmodel/auth_viewmodel.g.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/client/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pydantic_schemas/user_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/pydantic_schemas/user_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Flutter.main.dart.executor": "Debug",
+    "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -92,7 +98,10 @@
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "F:/FlutterProjects/flutter_internet_connection",
-    "settings.editor.selected.configurable": "com.google.gct.login2.settings.GoogleLoginApplicationSettingsConfigurableProvider",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>

@@ -35,7 +35,7 @@ class _SignupPageState extends ConsumerState<SignupPage> {
   }
   @override
   Widget build(BuildContext context) {
-    final isLoading =ref.watch(authViewModelProvider)?.isLoading == true;
+    final isLoading =ref.watch(authViewModelProvider.select((val) => val?.isLoading == true));
     ref.listen(
       authViewModelProvider,
           (_, next) {
@@ -85,11 +85,22 @@ class _SignupPageState extends ConsumerState<SignupPage> {
                controller: passwordController,
                isObscureText: true,),
              const SizedBox(height: 15),
-             AuthGradientButton(buttonText: "Sign Up",
-               onTap: () async{
-               if(formKey.currentState!.validate())
-               ref.read(authViewModelProvider.notifier).signUpUser(name: nameController.text, email: emailController.text, password: passwordController.text);
-             },),
+             AuthGradientButton(
+               buttonText: 'Sign up',
+               onTap: () async {
+                 if (formKey.currentState!.validate()) {
+                   await ref
+                       .read(authViewModelProvider.notifier)
+                       .signUpUser(
+                     name: nameController.text,
+                     email: emailController.text,
+                     password: passwordController.text,
+                   );
+                 } else {
+                   showSnackBar(context, 'Missing fields!');
+                 }
+               },
+             ),
              const SizedBox(height: 20),
            GestureDetector(
              onTap: ()

@@ -10,7 +10,7 @@ import '../model/user_model.dart';
 part 'auth_remote_repository.g.dart';
 
 @riverpod
-AuthRemoteRepository authRemoteRepository(AuthRemoteRepositoryRef ref ){
+AuthRemoteRepository authRemoteRepository(AuthRemoteRepositoryRef ref) {
   return AuthRemoteRepository();
 }
 
@@ -88,7 +88,7 @@ class AuthRemoteRepository {
     ;
   }
 
-/*  Future<Either<AppFailure, UserModel>> getCurrentUserData(String token) async {
+  Future<Either<AppFailure, UserModel>> getCurrentUserData(String token) async {
     try {
       final response = await http.get(
         Uri.parse(
@@ -112,5 +112,6 @@ class AuthRemoteRepository {
       );
     } catch (e) {
       return Left(AppFailure(e.toString()));
-    }*/
+    }
+  }
 }

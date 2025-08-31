@@ -5,6 +5,7 @@ import 'package:music_player/features/auth/view/pages/signup_page.dart';
 import '../../../../core/theme/app_pallete.dart';
 import '../../../../core/utils.dart';
 import '../../../../core/widgets/loader.dart';
+import '../../../home/view/home_page.dart';
 import '../../repository/auth_remote_repository.dart';
 import '../../viewmodel/auth_viewmodel.dart';
 import '../widgets/auth_gradient_button.dart';
@@ -28,12 +29,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
-    //formKey.currentState!.validate();
+    formKey.currentState!.validate();
 
   }
   @override
   Widget build(BuildContext context) {
-    final isLoading =ref.watch(authViewModelProvider)?.isLoading == true;
+    final isLoading =ref.watch(authViewModelProvider.select((val) => val?.isLoading == true));
     ref.listen(
       authViewModelProvider,
           (_, next) {
@@ -42,7 +43,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => const LoginPage()//HomePage(),
+                builder: (context) => const HomePage(),
               ),
                   (_) => false,
             );
@@ -83,12 +84,20 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   isObscureText: true,),
                 const SizedBox(height: 15),
                 AuthGradientButton(
-                  buttonText: "Sign in",
-                   onTap: ()async{
-                     await  AuthRemoteRepository().login(
-                         email:emailController.text,
-                         password:passwordController.text);
-                   },),
+                  buttonText: 'Sign in',
+                  onTap: () async {
+                    if (formKey.currentState!.validate()) {
+                      await ref
+                          .read(authViewModelProvider.notifier)
+                          .loginUser(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      );
+                    } else {
+                      showSnackBar(context, 'Missing fields!');
+                    }
+                  },
+                ),
                 const SizedBox(height: 20),
                GestureDetector(
                  onTap: ()

@@ -6,6 +6,12 @@ from models.user import User
 from pydantic_schemas.user_create import UserCreate
 from database import get_db
 from pydantic_schemas.user_login import UserLogin
+import jwt
+
+from middleware.auth_middleware import auth_middleware
+
+
+
 
 
 router = APIRouter()
@@ -38,4 +44,23 @@ def login_user(user:UserLogin,db: Session=Depends(get_db)):
    
     if not is_match:
         raise HTTPException(400, "Invalid email or password")
-    return user_db
+       
+    token = jwt.encode({'id': user_db.id}, 'password_key')
+    return {'token': token, 'user': user_db}
+    
+
+  
+@router.get('/')
+def current_user_data(db: Session=Depends(get_db), 
+                      user_dict = Depends(auth_middleware)):
+    user = db.query(User).filter(User.id == user_dict['uid']).first()##.options( joinedload(User.favorites)  ).first()
+
+    if not user:
+        raise HTTPException(404, 'User not found!')
+    
+    return user
+
+
+
+ # To activate the virtual environment in PowerShell, use:
+## .venv\Scripts\Activate.ps1
