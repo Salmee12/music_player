@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ae0189e-d356-4e88-8cea-3f36bbfdea68" name="Changes" comment="Signup page design completed">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/core/constants/server_constant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/constants/server_constant.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/core/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/core/utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/features/auth/view/pages/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/features/auth/view/pages/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/client/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="2ae0189e-d356-4e88-8cea-3f36bbfdea68" name="Changes" comment="Signup page design completed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
