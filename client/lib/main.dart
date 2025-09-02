@@ -3,10 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:music_player/core/provider/current_user_notifier.dart';
 import 'package:music_player/core/theme/theme.dart';
 import 'package:music_player/features/home/view/home_page.dart';
+import 'package:music_player/features/home/view/upload_song_page.dart';
 
 import 'features/auth/view/pages/signup_page.dart';
 import 'features/auth/viewmodel/auth_viewmodel.dart';
-
 
 
 
@@ -30,7 +30,7 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Music App',
       theme: AppTheme.darkThemeMode,
-      home: currentUser== null? const SignupPage() : HomePage(),
+      home: currentUser== null? const SignupPage() : UploadSongPage(), //HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }

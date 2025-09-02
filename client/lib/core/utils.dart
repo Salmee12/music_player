@@ -1,6 +1,7 @@
 import 'dart:io';
 
-//import 'package:file_picker/file_picker.dart';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 String rgbToHex(Color color) {
@@ -20,7 +21,6 @@ void showSnackBar(BuildContext context, String content) {
       ),
     );
 }
-/*
 Future<File?> pickImage() async {
   try {
     final filePickerRes = await FilePicker.platform.pickFiles(
@@ -49,4 +49,4 @@ Future<File?> pickAudio() async {
   } catch (e) {
     return null;
   }
-}*/
+}

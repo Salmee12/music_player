@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:music_player/features/auth/view/pages/signup_page.dart';
+import 'package:music_player/features/home/view/upload_song_page.dart';
 
 import '../../../../core/theme/app_pallete.dart';
 import '../../../../core/utils.dart';
@@ -43,7 +44,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) => const UploadSongPage()//HomePage(),
               ),
                   (_) => false,
             );
