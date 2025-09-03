@@ -63,4 +63,7 @@ def current_user_data(db: Session=Depends(get_db),
 
 
  # To activate the virtual environment in PowerShell, use:
+
+##F:cd "\FlutterProjects\music_player\server"
 ## .venv\Scripts\Activate.ps1
+# uvicorn main:app --host 0.0.0.0 --port 8000
