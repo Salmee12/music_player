@@ -12,6 +12,7 @@ import '../../../core/theme/app_pallete.dart';
 import '../../../core/utils.dart';
 import '../../../core/widgets/loader.dart';
 import '../../auth/view/widgets/custom_field.dart';
+import '../viewmodel/home_viewmodel.dart';
 
 class UploadSongPage extends ConsumerStatefulWidget {
   const UploadSongPage({super.key});
@@ -46,6 +47,7 @@ class _UploadSongPageState extends ConsumerState<UploadSongPage> {
     }
   }
 
+
   @override
   void dispose() {
     super.dispose();
@@ -55,7 +57,7 @@ class _UploadSongPageState extends ConsumerState<UploadSongPage> {
 
   @override
   Widget build(BuildContext context) {
-    //final isLoading = ref.watch(homeViewModelProvider.select((val) => val?.isLoading == true));
+    final isLoading = ref.watch(homeViewModelProvider.select((val) => val?.isLoading == true));
     return Scaffold(
       appBar: AppBar(
         title: const Text('Upload Song'),
@@ -63,7 +65,7 @@ class _UploadSongPageState extends ConsumerState<UploadSongPage> {
         actions: [
           IconButton(
             onPressed: () async {
-              /*if (formKey.currentState!.validate() &&
+              if (formKey.currentState!.validate() &&
                   selectedAudio != null &&
                   selectedImage != null) {
                 ref.read(homeViewModelProvider.notifier).uploadSong(
@@ -75,15 +77,15 @@ class _UploadSongPageState extends ConsumerState<UploadSongPage> {
                 );
               } else {
                 showSnackBar(context, 'Missing fields!');
-              }*/
+              }
             },
             icon: const Icon(Icons.check),
           ),
         ],
       ),
-      body:/* isLoading
+      body: isLoading
           ? const Loader()
-          :*/ SingleChildScrollView(
+          : SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Form(

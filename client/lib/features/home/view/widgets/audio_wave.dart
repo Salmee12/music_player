@@ -29,6 +29,7 @@ class _AudioWaveState extends State<AudioWave> {
     await playerController.preparePlayer(path: widget.path);
   }
 
+/*
   Future<void> playAndPause() async {
     if (!playerController.playerState.isPlaying) {
       await playerController.startPlayer();
@@ -36,6 +37,20 @@ class _AudioWaveState extends State<AudioWave> {
       await playerController.pausePlayer();
     }
     setState(() {});
+  }
+*/
+  Future<void> playAndPause() async {
+    try {
+      if (!playerController.playerState.isPlaying) {
+        await playerController.startPlayer();
+      } else if (!playerController.playerState.isPaused) {
+        await playerController.pausePlayer();
+      }
+      if (mounted) setState(() {});
+    } catch (e) {
+      // Handle play/pause errors gracefully
+      print('Error in playAndPause: $e');
+    }
   }
 
 
