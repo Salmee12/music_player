@@ -5,6 +5,8 @@ import 'package:http/http.dart' as http;
 import 'package:music_player/core/constants/server_constant.dart';
 import 'package:music_player/core/failure/failure.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../model/song_model.dart';
 part 'home_repository.g.dart';
 
 @riverpod
@@ -63,7 +65,7 @@ class HomeRepository {
     }
   }
 
- /* Future<Either<AppFailure, List<SongModel>>> getAllSongs({
+  Future<Either<AppFailure, List<SongModel>>> getAllSongs({
     required String token,
   })
     async {
@@ -92,7 +94,7 @@ class HomeRepository {
         return Left(AppFailure(e.toString()));
     }
   }
-
+/*
   Future<Either<AppFailure, bool>> favSong({
     required String token,
     required String songId,

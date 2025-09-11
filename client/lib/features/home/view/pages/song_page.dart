@@ -1,8 +1,10 @@
-
-
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/provider/current_song_notifier.dart';
+import '../../../../core/theme/app_pallete.dart';
+import '../../../../core/utils.dart';
+import '../../../../core/widgets/loader.dart';
 import '../../viewmodel/home_viewmodel.dart';
 
 class SongsPage extends ConsumerWidget {

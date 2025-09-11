@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:music_player/features/home/view/pages/song_page.dart';
+import 'package:music_player/features/home/view/pages/upload_song_page.dart';
 
 import '../../../../core/theme/app_pallete.dart';
+import '../widgets/music_slab.dart';
 import 'library_page.dart';
 
 class HomePage extends ConsumerStatefulWidget {
@@ -17,22 +19,21 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   final pages = const [
     SongsPage(),
-    LibraryPage(),
+    UploadSongPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+        body: Stack(
         children: [
           pages[selectedIndex],
           const Positioned(
             bottom: 0,
-            child: MusicSlab(),
+            child:MusicSlab(),
           ),
         ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
+      ),bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: (value) {
           setState(() {
@@ -53,12 +54,12 @@ class _HomePageState extends ConsumerState<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              'assets/images/library.png',
+              'assets/images/upload.png',
               color: selectedIndex == 1
                   ? Pallete.whiteColor
                   : Pallete.inactiveBottomBarItemColor,
             ),
-            label: 'Library',
+            label: 'Upload',
           ),
         ],
       ),

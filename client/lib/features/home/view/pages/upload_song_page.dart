@@ -8,10 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:music_player/features/home/view/widgets/audio_wave.dart';
 
-import '../../../core/theme/app_pallete.dart';
-import '../../../core/utils.dart';
-import '../../../core/widgets/loader.dart';
-import '../../auth/view/widgets/custom_field.dart';
+import '../../../../core/theme/app_pallete.dart';
+import '../../../../core/utils.dart';
+import '../../../auth/view/widgets/custom_field.dart';
+import '../../viewmodel/home_viewmodel.dart';
+
+
 
 class UploadSongPage extends ConsumerStatefulWidget {
   const UploadSongPage({super.key});
@@ -63,7 +65,7 @@ class _UploadSongPageState extends ConsumerState<UploadSongPage> {
         actions: [
           IconButton(
             onPressed: () async {
-              /*if (formKey.currentState!.validate() &&
+              if (formKey.currentState!.validate() &&
                   selectedAudio != null &&
                   selectedImage != null) {
                 ref.read(homeViewModelProvider.notifier).uploadSong(
@@ -75,7 +77,7 @@ class _UploadSongPageState extends ConsumerState<UploadSongPage> {
                 );
               } else {
                 showSnackBar(context, 'Missing fields!');
-              }*/
+              }
             },
             icon: const Icon(Icons.check),
           ),
