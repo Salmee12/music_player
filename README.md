@@ -142,9 +142,6 @@ This project was built to demonstrate:
 - Cloud media handling
 - Real-world app development practices
 
-## 📸 Screenshots
-
-(Add screenshots here)
 
 ## 🔮 Future Improvements
 
