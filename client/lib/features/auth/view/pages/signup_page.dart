@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:music_player/core/widgets/loader.dart';
+import 'package:music_player/features/auth/repository/auth_remote_repository.dart';
+import 'package:music_player/features/auth/viewmodel/auth_viewmodel.dart';
 
 import '../../../../core/theme/app_pallete.dart';
+import '../../../../core/utils.dart';
 import '../widgets/auth_gradient_button.dart';
 import '../widgets/custom_field.dart';
+import 'login_page.dart';
 
-class SignupPage extends StatefulWidget {
+class SignupPage extends ConsumerStatefulWidget {
   const SignupPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  ConsumerState<SignupPage> createState() => _SignupPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _SignupPageState extends ConsumerState<SignupPage> {
   final nameController= TextEditingController();
   final emailController= TextEditingController();
   final passwordController= TextEditingController();
@@ -24,14 +30,36 @@ class _SignupPageState extends State<SignupPage> {
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
-    //formKey.currentState!.validate();
+    formKey.currentState!.validate();
 
   }
   @override
   Widget build(BuildContext context) {
+    final isLoading =ref.watch(authViewModelProvider.select((val) => val?.isLoading == true));
+    ref.listen(
+      authViewModelProvider,
+          (_, next) {
+        next?.when(
+          data: (data) {
+            showSnackBar(context, 'Account created successfully! Please  login.',);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const LoginPage(),
+              ),
+            );
+          },
+          error: (error, st) {showSnackBar(context, error.toString());
+            },
+          loading: () {},
+        );
+      },
+    );
     return Scaffold(
       appBar: AppBar(),
-      body: SafeArea(
+      body: isLoading
+        ? const Loader()
+          :SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(15.0),
          child: Form(
@@ -57,9 +85,27 @@ class _SignupPageState extends State<SignupPage> {
                controller: passwordController,
                isObscureText: true,),
              const SizedBox(height: 15),
-             AuthGradientButton(buttonText: "Sign Up", onTap: (){},),
+             AuthGradientButton(
+               buttonText: 'Sign up',
+               onTap: () async {
+                 if (formKey.currentState!.validate()) {
+                   await ref
+                       .read(authViewModelProvider.notifier)
+                       .signUpUser(
+                     name: nameController.text,
+                     email: emailController.text,
+                     password: passwordController.text,
+                   );
+                 } else {
+                   showSnackBar(context, 'Missing fields!');
+                 }
+               },
+             ),
              const SizedBox(height: 20),
-             RichText(
+           GestureDetector(
+             onTap: ()
+             {Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginPage(),));},
+             child: RichText(
                text: TextSpan(
                  text: 'Already have an account? ',
                  style: Theme.of(context).textTheme.titleMedium,
@@ -74,6 +120,7 @@ class _SignupPageState extends State<SignupPage> {
                  ],
                ),
              ),
+           )
            ],
          ),
          ),

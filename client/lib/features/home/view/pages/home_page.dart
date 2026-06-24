@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:music_player/features/home/view/pages/song_page.dart';
+import 'package:music_player/features/home/view/pages/upload_song_page.dart';
+
+import '../../../../core/theme/app_pallete.dart';
+import '../widgets/music_slab.dart';
+import 'library_page.dart';
+
+class HomePage extends ConsumerStatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  ConsumerState<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends ConsumerState<HomePage> {
+  int selectedIndex = 0;
+
+  final pages = const [
+    SongsPage(),
+    UploadSongPage(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Stack(
+        children: [
+          pages[selectedIndex],
+          const Positioned(
+            bottom: 0,
+            child:MusicSlab(),
+          ),
+        ],
+      ),bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex,
+        onTap: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              selectedIndex == 0
+                  ? 'assets/images/home_filled.png'
+                  : 'assets/images/home_unfilled.png',
+              color: selectedIndex == 0
+                  ? Pallete.whiteColor
+                  : Pallete.inactiveBottomBarItemColor,
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/images/upload.png',
+              color: selectedIndex == 1
+                  ? Pallete.whiteColor
+                  : Pallete.inactiveBottomBarItemColor,
+            ),
+            label: 'Upload',
+          ),
+        ],
+      ),
+    );
+  }
+}
