@@ -152,8 +152,3 @@ This project was built to demonstrate:
 - Background playback
 - Push notifications
 
-## 👨‍💻 Author
-
-Your Name
-
-GitHub: Your GitHub Profile
